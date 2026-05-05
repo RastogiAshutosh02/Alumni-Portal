@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Student Gymkhana Election</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+  <style>
+
+nav > .nav.nav-tabs{
+
+  border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+}
+
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -60px;
+  left: -10%;
+  border: 15px solid transparent;
+  border-top-color: #e74c3c ;
+}
+.tab-content{
+  background: #fdfdfd;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    border-top:5px solid #e74c3c;
+    border-bottom:5px solid #e74c3c;
+    padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #e74c3c;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+</style>
+
+</head>
+
+<body id="page-top">
+
+  <!--nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Student GymKhana Election</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/election.jpg" alt="">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#schedule">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#eligibility">Eligibility & Forms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#principles">PRINCIPLES & GUIDELINES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#election_body">Election Body</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#voter_search">Voter Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav-->
+
+  <div class="container-fluid p-0">
+
+    
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="voter_search">
+      <div class="w-100">
+        <h2 class="mb-5">Voter Search & Group List</h2>
+
+        <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>Group Name</th>
+            <th>Group Description</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td>Group A</td>
+            <td>B.Tech./BE/Dual Degree/Integrated M. Tech (3rd Year)</td>
+          </tr>
+          <tr>
+            <td>Group B</td>
+            <td>B.Tech./BE/Dual Degree/Integrated M. Tech (2nd Year)</td>
+          </tr>
+          <tr>
+            <td>Group C</td>
+            <td>B.Tech./BE/Dual Degree/Integrated M. Tech (1st Year)</td>
+          </tr>
+          <tr>
+            <td>Group D</td>
+            <td>M.Tech. (1st Year) + Dual Degree/Integrated M.Tech (4th Year)</td>
+          </tr>
+          <tr>
+            <td>Group E</td>
+            <td>2 Yr. M.Sc (1st Year) + 3 Yr. M.Sc Tech (1st year & 2nd year) + 2 Yr. MBA (1st Year)</td>
+          </tr>
+          <tr>
+            <td>Group F</td>
+            <td>Ph.D (Full time) (1st year & 2nd year)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 ">
+            <nav>
+              <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="group-a-tab" data-toggle="tab" href="#group-a" role="tab" aria-controls="group-a" aria-selected="true">Group A</a>
+                <a class="nav-item nav-link" id="group-b-tab" data-toggle="tab" href="#group-b" role="tab" aria-controls="group-b" aria-selected="false">Group B</a>
+                <a class="nav-item nav-link" id="group-c-tab" data-toggle="tab" href="#group-c" role="tab" aria-controls="group-c" aria-selected="false">Group C</a>
+                <a class="nav-item nav-link" id="group-d-tab" data-toggle="tab" href="#group-d" role="tab" aria-controls="group-d" aria-selected="false">Group D</a>
+                <a class="nav-item nav-link" id="group-e-tab" data-toggle="tab" href="#group-e" role="tab" aria-controls="group-e" aria-selected="false">Group E</a>
+                <a class="nav-item nav-link" id="group-f-tab" data-toggle="tab" href="#group-f" role="tab" aria-controls="group-f" aria-selected="false">Group F</a>
+              </div>
+            </nav>
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="group-a" role="tabpanel" aria-labelledby="group-a-tab">
+                <div id='ga-table-container' class="table-responsive"></div>
+              </div>
+              <div class="tab-pane fade" id="group-b" role="tabpanel" aria-labelledby="group-b-tab">
+                <div id='gb-table-container' class="table-responsive"></div>
+              </div>
+              <div class="tab-pane fade" id="group-c" role="tabpanel" aria-labelledby="group-c-tab">
+                <div id='gc-table-container' class="table-responsive"></div>
+              </div>
+              <div class="tab-pane fade" id="group-d" role="tabpanel" aria-labelledby="group-d-tab">
+                <div id='gd-table-container' class="table-responsive"></div>
+              </div>
+              <div class="tab-pane fade" id="group-e" role="tabpanel" aria-labelledby="group-e-tab">
+                <div id='ge-table-container' class="table-responsive"></div>
+              </div>
+              <div class="tab-pane fade" id="group-f" role="tabpanel" aria-labelledby="group-f-tab">
+                <div id='gf-table-container' class="table-responsive"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <hr class="m-0">
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+
+    <script type="text/javascript">
+      function format_link(link){
+        if (link)
+          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+        else
+          return "";
+      }
+      $(function(){
+        CsvToHtmlTable.init({
+          csv_path: 'data/Group_A.csv',
+          element: 'ga-table-container', 
+          //allow_download: true,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": true},
+          pageLength: 10,
+          //custom_formatting: [[4, format_link]]
+        });
+
+        CsvToHtmlTable.init({
+          csv_path: 'data/Group_A.csv',
+          element: 'gb-table-container', 
+          //allow_download: true,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": false},
+          //custom_formatting: [[4, format_link]]
+        });
+
+        CsvToHtmlTable.init({
+          csv_path: 'data/Group_A.csv',
+          element: 'gc-table-container', 
+          //allow_download: true,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": false},
+          //custom_formatting: [[4, format_link]]
+        });
+
+        CsvToHtmlTable.init({
+          csv_path: 'data/Group_A.csv',
+          element: 'gd-table-container', 
+          //allow_download: true,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": false},
+          //custom_formatting: [[4, format_link]]
+        });
+
+        CsvToHtmlTable.init({
+          csv_path: 'data/Group_A.csv',
+          element: 'ge-table-container', 
+          //allow_download: true,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": false},
+          //custom_formatting: [[4, format_link]]
+        });
+
+        CsvToHtmlTable.init({
+          csv_path: 'data/Group_A.csv',
+          element: 'gf-table-container', 
+          //allow_download: true,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": false},
+          //custom_formatting: [[4, format_link]]
+        });
+      });
+    </script>
+
+
+</body>
+
+</html>
