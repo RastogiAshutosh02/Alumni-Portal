@@ -37,9 +37,26 @@ if (!fs.existsSync(uploadsDir)) {
 // Helmet — secure HTTP headers
 app.use(helmet());
 
-// CORS — allow frontend origin
+// CORS — allow all valid frontend origins
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'https://people.iitism.ac.in',
+  'http://localhost:3000',
+  'http://localhost:5000',
+  'http://localhost:5173',
+  'http://localhost:5500',
+  'http://localhost:8080',
+  'http://127.0.0.1:5500',
+  'http://127.0.0.1:3000',
+].filter(Boolean);
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: (origin, callback) => {
+    // allow requests with no origin (file://, curl, Postman, same-origin)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    callback(new Error(`CORS: origin ${origin} not allowed`));
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization'],
