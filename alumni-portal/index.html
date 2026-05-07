@@ -3,33 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/alumni-portal/" />
+    <base href="/~acsrao/alumni-portal/" />
     <title>IIT (ISM) Dhanbad — Alumni Portal | Centenary Year 1926–2026</title>
     <meta name="description" content="Official Alumni Portal of Indian Institute of Technology (Indian School of Mines), Dhanbad. Celebrating 100 years of excellence." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <script>
-      (function(){
-        const OLD = 'http://localhost:5000/api';
-        const NEW = 'http://localhost:5001/api';
-        const _fetch = window.fetch;
-        window.fetch = function(input, init){
-          try{
-            if(typeof input === 'string' && input.indexOf(OLD) === 0) input = input.replace(OLD, NEW);
-            else if(input && input.url && typeof input.url === 'string' && input.url.indexOf(OLD) === 0) input = new Request(input.url.replace(OLD, NEW), input);
-          }catch(e){}
-          return _fetch.call(this, input, init);
-        };
-        const _open = XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.open;
-        if(_open){
-          XMLHttpRequest.prototype.open = function(method, url){
-            try{ if(typeof url === 'string' && url.indexOf(OLD) === 0) url = url.replace(OLD, NEW); }catch(e){}
-            return _open.apply(this, arguments);
-          };
-        }
-      })();
-    </script>
     <script type="module" crossorigin src="./assets/index-_sZd3Fw4.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-B6smZVIX.css">
   </head>
