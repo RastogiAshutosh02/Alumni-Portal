@@ -1,0 +1,59 @@
+# -------------------------------------------------------
+# Security Headers
+# -------------------------------------------------------
+
+# Prevent clickjacking
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Prevent MIME-type sniffing
+Header always set X-Content-Type-Options "nosniff"
+
+# Enable XSS filter in older browsers
+Header always set X-XSS-Protection "1; mode=block"
+
+# Control referrer information sent to other sites
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Restrict browser features
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# Force HTTPS for 1 year (enable only after confirming HTTPS works on the server)
+# Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Content Security Policy
+# Allows: self, Bootstrap/jQuery CDN-served local files, inline styles (required by template)
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-ancestors 'self';"
+
+# -------------------------------------------------------
+# Hide server information
+# -------------------------------------------------------
+ServerSignature Off
+
+# -------------------------------------------------------
+# Block direct access to sensitive files
+# -------------------------------------------------------
+<FilesMatch "\.(env|log|sql|bak|sh|git|md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to dot-files (e.g. .git, .env, .htaccess itself is always readable by Apache)
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to PHP config/token files that should not be called directly from a browser
+# (csrf_token.php is intentionally accessible via AJAX — do not block it)
+
+# -------------------------------------------------------
+# Disable directory listing
+# -------------------------------------------------------
+Options -Indexes
+
+# -------------------------------------------------------
+# Force HTTPS redirect (enable after confirming SSL certificate is active)
+# -------------------------------------------------------
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

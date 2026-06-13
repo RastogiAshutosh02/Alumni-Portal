@@ -1,3 +1,9 @@
+/**
+ * Alumni Connection Portal — Video Player Script
+ * @author  Ashutosh Rastogi <24MT0090@iitism.ac.in>
+ * @project Alumni Connection Portal (College Project)
+ * @year    2026
+ */
 var player;
 
 function onYouTubePlayerAPIReady() {

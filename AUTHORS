@@ -1,0 +1,18 @@
+Alumni Connection Portal
+========================
+Developed independently as a college project.
+
+Author
+------
+Ashutosh Rastogi
+IIT (ISM) Dhanbad
+Roll No: 24MT0090
+Email:   24MT0090@iitism.ac.in
+
+Project Description
+-------------------
+An alumni networking and job leads portal built for the college community.
+Includes a faculty/alumni profile system, contact form with CSRF protection
+and rate limiting, responsive design, and secure PHP backend.
+
+All source code written by Ashutosh Rastogi, 2026.

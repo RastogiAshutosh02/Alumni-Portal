@@ -1,3 +1,9 @@
+/**
+ * Alumni Connection Portal — Contact Form Script
+ * @author  Ashutosh Rastogi <24MT0090@iitism.ac.in>
+ * @project Alumni Connection Portal (College Project)
+ * @year    2026
+ */
 $(document).ready(function(){
     
     (function($) {

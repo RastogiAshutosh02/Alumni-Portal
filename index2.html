@@ -7,6 +7,14 @@
         <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>RAMIREZ - Resume / CV / </title>
+        <!-- Author -->
+        <!-- Developed by Ashutosh Rastogi <24MT0090@iitism.ac.in> — Alumni Connection Portal, 2026 -->
+        <meta name="author" content="Ashutosh Rastogi">
+        <meta name="developer" content="Ashutosh Rastogi (24MT0090@iitism.ac.in)">
+        <!-- Security meta tags -->
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
 
         <!-- Icon css link -->
         <link href="vendors/material-icon/css/materialdesignicons.min.css" rel="stylesheet">
@@ -501,23 +509,24 @@
                                 </div>
                                 <div class="row">
                                     <form action="contact_process.php" method="post" id="contactForm">
+                                        <input type="hidden" name="csrf_token" id="csrf_token" value="">
                                         <div class="form-group col-md-12">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="First Name*">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="First Name*" maxlength="100" autocomplete="name">
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <input type="text" class="form-control" name="last" id="last" placeholder="Last Name*">
+                                            <input type="text" class="form-control" name="last" id="last" placeholder="Last Name*" maxlength="100" autocomplete="family-name">
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email*">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email*" maxlength="254" autocomplete="email">
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" maxlength="200">
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <textarea class="form-control" rows="1" id="message" name="message" placeholder="Write Message"></textarea>
+                                            <textarea class="form-control" rows="1" id="message" name="message" placeholder="Write Message" maxlength="5000"></textarea>
                                         </div>
                                         <div class="form-group col-md-12">
-                                            <button class="btn btn-default contact_btn" type="submit"><span>Send Massage</span></button>
+                                            <button class="btn btn-default contact_btn" type="submit"><span>Send Message</span></button>
                                         </div>
                                     </form>
                                     <div id="success">
@@ -564,7 +573,7 @@
                 <div class="container">
                     <div class="pull-left">
                         <h5><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </p></h5>
                     </div>
@@ -613,7 +622,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <!-- Extra plugin js -->
@@ -637,5 +646,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="js/contact.js"></script>
         
         <script src="js/theme.js"></script>
+        <script>
+            // Fetch CSRF token from server and inject into the contact form
+            fetch('csrf_token.php', { credentials: 'same-origin' })
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    var el = document.getElementById('csrf_token');
+                    if (el && data.csrf_token) { el.value = data.csrf_token; }
+                })
+                .catch(function() {});
+        </script>
     </body>
 </html>
